@@ -12,12 +12,14 @@ spec:
     helm:
       releaseName: pihole
       values: |
+        serviceDns:
+          type: LoadBalancer
         persistentVolumeClaim:
           enabled: true
         ingress:
           enabled: true
           hosts:
-            - pihole.home-internal.marceligrabowski.pl
+            - pihole.local
   destination:
     server: "https://kubernetes.default.svc"
     namespace: infra
