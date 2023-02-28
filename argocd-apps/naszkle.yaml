@@ -6,7 +6,7 @@ metadata:
 spec:
   project: naszkle
   source:
-    repoURL: 'git@github.com:marceligrabowski/homelab-k8s.git'
+    repoURL: 'https://github.com/marceligrabowski/homelab-k8s'
     path: ./apps/naszkle/dev
     targetRevision: HEAD
   destination:
