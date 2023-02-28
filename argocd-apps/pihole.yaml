@@ -20,7 +20,7 @@ spec:
           enabled: true
           hosts:
             - pihole.home-internal.marceligrabowski.pl
-            - pihole.local
+            - pihole.home
   destination:
     server: "https://kubernetes.default.svc"
     namespace: infra
