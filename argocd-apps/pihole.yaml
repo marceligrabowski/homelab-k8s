@@ -19,6 +19,7 @@ spec:
         ingress:
           enabled: true
           hosts:
+            - pihole.home-internal.marceligrabowski.pl
             - pihole.local
   destination:
     server: "https://kubernetes.default.svc"
