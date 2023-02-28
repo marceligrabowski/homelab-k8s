@@ -16,6 +16,8 @@ spec:
           enabled: true
         ingress:
           enabled: true
+          hosts:
+            - pihole.home-internal.marceligrabowski.pl
   destination:
     server: "https://kubernetes.default.svc"
     namespace: infra
