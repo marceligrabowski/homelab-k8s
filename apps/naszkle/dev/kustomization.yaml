@@ -1,0 +1,21 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: naszkle
+
+commonLabels:
+  app: na-szkle-saleor-platform
+
+images:
+  - name: saleor-image
+    newName: skymoore/saleor
+    newTag: "3.8.4"
+  - name: saleor-dashboard-image
+    newName: skymoore/saleor-dashboard
+    newTag: "3.8.4"
+
+resources:
+  - https://github.com/skymoore/saleor-platform-k8s-kustomize/tree/main/base
+  - https://github.com/skymoore/saleor-platform-k8s-kustomize/tree/main/saleor
+  - https://github.com/skymoore/saleor-platform-k8s-kustomize/tree/main/saleor-dashboard

@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: naszkle-dev
+  namespace: argocd
+spec:
+  project: naszkle
+  source:
+    repoURL: 'git@github.com:marceligrabowski/homelab-k8s.git'
+    path: ./apps/naszkle/dev
+    targetRevision: HEAD
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: naszkle
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
